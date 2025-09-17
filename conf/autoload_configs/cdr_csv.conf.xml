@@ -1,0 +1,12 @@
+<configuration name="cdr_csv.conf" description="CDR CSV Format">
+  <settings>
+    <param name="default-template" value="online"/>
+    <param name="rotate-on-hup" value="true"/>
+    <param name="master-file-only" value="true"/>
+    <param name="legs" value="ab"/>
+  </settings>
+
+  <templates>
+    <template name="online">{"uuid":"${uuid}","originator":"${originator}","start_epoch":${start_epoch},"progress_media_epoch": ${progress_media_epoch},"answer_epoch":${answer_epoch},"end_epoch":${end_epoch},"duration":${duration},"billmsec":${billmsec},"hangup_cause":"${hangup_cause}","sip_hangup_disposition":"${sip_hangup_disposition}","sip_term_status":"${sip_term_status}","userId":"${userId}","taskId":"${taskId}","activityId":"${activityId}","oriCaller":"${oriCaller}","oriCallee":"${oriCallee}","realCaller":"${realCaller}","realCallee":"${realCallee}","record":"${record_file}"}</template>
+  </templates>
+</configuration>

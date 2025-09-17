@@ -1,0 +1,11 @@
+<configuration name="lua.conf" description="LUA Configuration">
+  <settings>
+    <param name="module-directory" value="/root/.luarocks/lib/lua/5.2/?.so;/usr/local/lib/lua/5.2/?.so;/usr/lib/x86_64-linux-gnu/lua/5.2/?.so;/usr/lib/lua/5.2/?.so;/usr/local/lib/lua/5.2/loadall.so;./?.so"/>
+
+    <param name="script-directory" value="/root/.luarocks/share/lua/5.2/?.lua;/root/.luarocks/share/lua/5.2/?/init.lua;/usr/local/share/lua/5.2/?.lua;/usr/local/share/lua/5.2/?/init.lua;/usr/local/lib/lua/5.2/?.lua;/usr/local/lib/lua/5.2/?/init.lua;/usr/share/lua/5.2/?.lua;/usr/share/lua/5.2/?/init.lua;./?.lua"/>
+    <param name="script-directory" value="$${script_dir}/?.lua"/>
+
+    <param name="xml-handler-script" value="entry.lua"/>
+    <param name="xml-handler-bindings" value="dialplan|directory"/>
+  </settings>
+</configuration>

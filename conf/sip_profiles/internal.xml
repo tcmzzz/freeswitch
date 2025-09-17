@@ -1,0 +1,37 @@
+<profile name="internal">
+
+    <!-- wrong config
+    <param name="inbound-proxy-media" value="true"/>
+    -->
+  <settings>
+    <param name="parse-all-invite-headers" value="true"/>
+
+    <param name="inbound-codec-negotiation" value="greedy"/>
+    <param name="inbound-late-negotiation" value="true"/>
+
+    <param name="inbound-codec-prefs" value="PCMU,PCMA"/>
+    <param name="outbound-codec-prefs" value="PCMU,PCMA"/>
+
+    <param name="sip-trace" value="yes"/>
+    <param name="auth-calls" value="false"/>
+    <param name="debug" value="1"/>
+
+    <param name="sip-port" value="5061"/>
+    <param name="wss-binding"  value="0.0.0.0:7443"/>
+
+    <param name="dialplan" value="XML"/>
+    <param name="context" value="public"/>
+
+    <param name="rtp-ip" value="$${local_ip_v4}"/>
+    <param name="sip-ip" value="$${local_ip_v4}"/>
+    <param name="ext-rtp-ip" value="$${external_ip}"/>
+    <param name="ext-sip-ip" value="$${external_ip}"/>
+
+
+    <param name="apply-candidate-acl" value="localnet.auto"/>
+    <param name="local-network-acl" value="rfc1918.auto"/>
+    <param name="local-network-acl" value="nat.auto"/>
+
+    <param name="rtp-timer-name" value="soft"/>
+  </settings>
+</profile>
